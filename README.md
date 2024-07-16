@@ -11,6 +11,9 @@ M5Stackを使ったMatterのサンプルコード集です。今のところNano
 以下のコマンドでビルド用Dockerイメージを構築しておきます。
 
 ```
+sudo groupadd docker
+sudo usermod -a -G docker $USER
+sudo chown root:docker /var/run/docker.sock
 cd docker
 make build
 ```
